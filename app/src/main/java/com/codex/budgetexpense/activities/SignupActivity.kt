@@ -9,10 +9,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.OutlinedTextField
-import androidx.compose.material3.Text
+import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -24,6 +21,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
+import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.TextUnit
@@ -57,6 +55,7 @@ class SignupActivity : BaseActivity() {
         var email by remember { mutableStateOf("") }
         var password by remember { mutableStateOf("") }
         var name by remember { mutableStateOf("") }
+        var passwordVisibility by remember { mutableStateOf(false) }
 
         if (isLoading.value) {
             loadingDialog("Signing...")
@@ -141,7 +140,26 @@ class SignupActivity : BaseActivity() {
                     onValueChange = {
                         password = it
                     },
-                    visualTransformation = PasswordVisualTransformation(),
+                    visualTransformation = if (passwordVisibility) VisualTransformation.None else PasswordVisualTransformation(),
+                    trailingIcon = {
+                        IconButton(
+                            onClick = { passwordVisibility = !passwordVisibility },
+                            modifier = Modifier
+                                .padding(end = 10.dp)
+                                .size(30.dp),
+                            colors = IconButtonDefaults.iconButtonColors(contentColor = Color.White)
+                        ) {
+                            val passwordVisibilityIcon = if (passwordVisibility) {
+                                painterResource(id = R.drawable.hide)
+                            } else {
+                                painterResource(id = R.drawable.view)
+                            }
+                            Icon(
+                                painter = passwordVisibilityIcon,
+                                contentDescription = "Password Visibility Toggle"
+                            )
+                        }
+                    },
                     keyboardOptions = KeyboardOptions.Default.copy(
                         imeAction = ImeAction.Done,
                         keyboardType = KeyboardType.Password

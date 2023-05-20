@@ -1,11 +1,13 @@
 package com.codex.budgetexpense.activities
 
+import android.graphics.drawable.Icon
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.material.icons.Icons
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
@@ -20,6 +22,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
+import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.TextUnit
@@ -51,7 +54,7 @@ class LoginActivity : BaseActivity() {
     fun LoginScreen() {
         var email by remember { mutableStateOf("") }
         var password by remember { mutableStateOf("") }
-
+        var passwordVisibility by remember { mutableStateOf(false) }
         if (isLoading.value) {
             loadingDialog("Logging...")
         }
@@ -107,7 +110,26 @@ class LoginActivity : BaseActivity() {
                     onValueChange = {
                         password = it
                     },
-                    visualTransformation = PasswordVisualTransformation(),
+                    visualTransformation = if (passwordVisibility) VisualTransformation.None else PasswordVisualTransformation(),
+                    trailingIcon = {
+                        IconButton(
+                            onClick = { passwordVisibility = !passwordVisibility },
+                            modifier = Modifier
+                                .padding(end = 10.dp)
+                                .size(30.dp),
+                            colors = IconButtonDefaults.iconButtonColors(contentColor = Color.White)
+                        ) {
+                            val passwordVisibilityIcon = if (passwordVisibility) {
+                                painterResource(id = R.drawable.hide)
+                            } else {
+                                painterResource(id = R.drawable.view)
+                            }
+                            Icon(
+                                painter = passwordVisibilityIcon,
+                                contentDescription = "Password Visibility Toggle"
+                            )
+                        }
+                    },
                     keyboardOptions = KeyboardOptions.Default.copy(
                         imeAction = ImeAction.Done,
                         keyboardType = KeyboardType.Password
