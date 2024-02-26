@@ -443,7 +443,7 @@ class NavigationDetailActivity : BaseActivity() {
                                     shape = RoundedCornerShape(20.dp)
                                 )
                                 .fillMaxWidth(),
-                            textStyle = TextStyle(color = Color.White),
+                            textStyle = TextStyle(color = Color.White, fontFamily = customFont),
                             shape = RoundedCornerShape(20.dp),
                             keyboardOptions = KeyboardOptions.Default.copy(
                                 imeAction = ImeAction.Done,
@@ -467,10 +467,9 @@ class NavigationDetailActivity : BaseActivity() {
                         ) {
                             Text(
                                 text = selectedType.title,
-                                fontSize = 18.sp,
+                                style = textStyle(textSize = 14f, color = Color.White),
                                 modifier = Modifier
-                                    .padding(16.dp),
-                                color = Color.White
+                                    .padding(16.dp)
                             )
                             Icon(
                                 Icons.Filled.ArrowDropDown,
@@ -496,7 +495,7 @@ class NavigationDetailActivity : BaseActivity() {
                                     }, text = {
                                         Text(
                                             text = item.title,
-                                            fontSize = 16.sp,
+                                            style = textStyle(textSize = 16f, color = Color.White),
                                             modifier = Modifier.padding(16.dp)
                                         )
                                     })
@@ -578,7 +577,7 @@ class NavigationDetailActivity : BaseActivity() {
                                     shape = RoundedCornerShape(20.dp)
                                 )
                                 .fillMaxWidth(),
-                            textStyle = TextStyle(color = Color.White),
+                            textStyle = TextStyle(color = Color.White,fontFamily = customFont),
                             shape = RoundedCornerShape(20.dp),
                             keyboardOptions = KeyboardOptions.Default.copy(
                                 imeAction = ImeAction.Done,
@@ -659,7 +658,7 @@ class NavigationDetailActivity : BaseActivity() {
                                     shape = RoundedCornerShape(20.dp)
                                 )
                                 .fillMaxWidth(),
-                            textStyle = TextStyle(color = Color.White),
+                            textStyle = TextStyle(color = Color.White,fontFamily = customFont),
                             shape = RoundedCornerShape(20.dp),
                             keyboardOptions = KeyboardOptions.Default.copy(
                                 imeAction = ImeAction.Done,
@@ -1004,7 +1003,7 @@ class NavigationDetailActivity : BaseActivity() {
                                     shape = RoundedCornerShape(20.dp)
                                 )
                                 .fillMaxWidth(),
-                            textStyle = TextStyle(color = Color.White),
+                            textStyle = TextStyle(color = Color.White,fontFamily = customFont),
                             shape = RoundedCornerShape(20.dp),
                             keyboardOptions = KeyboardOptions.Default.copy(
                                 imeAction = ImeAction.Done,
@@ -1028,7 +1027,7 @@ class NavigationDetailActivity : BaseActivity() {
                                     shape = RoundedCornerShape(20.dp)
                                 )
                                 .fillMaxWidth(),
-                            textStyle = TextStyle(color = Color.White),
+                            textStyle = TextStyle(color = Color.White,fontFamily = customFont),
                             shape = RoundedCornerShape(20.dp),
                             keyboardOptions = KeyboardOptions.Default.copy(
                                 imeAction = ImeAction.Done,
@@ -1051,10 +1050,9 @@ class NavigationDetailActivity : BaseActivity() {
                         ) {
                             Text(
                                 text = selectedType.title,
-                                fontSize = 18.sp,
+                                style = textStyle(textSize = 18f, color = Color.White),
                                 modifier = Modifier
-                                    .padding(16.dp),
-                                color = Color.White
+                                    .padding(16.dp)
                             )
                             Icon(
                                 Icons.Filled.ArrowDropDown,
@@ -1080,7 +1078,7 @@ class NavigationDetailActivity : BaseActivity() {
                                     }, text = {
                                         Text(
                                             text = item.title,
-                                            fontSize = 16.sp,
+                                            style = textStyle(textSize = 16f, color = Color.White),
                                             modifier = Modifier.padding(16.dp)
                                         )
                                     })
@@ -1163,7 +1161,7 @@ class NavigationDetailActivity : BaseActivity() {
                                     shape = RoundedCornerShape(20.dp)
                                 )
                                 .fillMaxWidth(),
-                            textStyle = TextStyle(color = Color.White),
+                            textStyle = TextStyle(color = Color.White,fontFamily = customFont),
                             shape = RoundedCornerShape(20.dp),
                             keyboardOptions = KeyboardOptions.Default.copy(
                                 imeAction = ImeAction.Done,

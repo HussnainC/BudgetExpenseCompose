@@ -77,6 +77,7 @@ class SignupActivity : BaseActivity() {
                 style = TextStyle(
                     color = Color.White,
                     fontWeight = FontWeight.Bold,
+                    fontFamily = customFont,
                     fontSize = TextUnit(24f, type = TextUnitType.Sp)
                 )
 
@@ -88,7 +89,11 @@ class SignupActivity : BaseActivity() {
             ) {
                 Text(
                     text = "Name:",
-                    style = TextStyle(color = Color.White, fontWeight = FontWeight.Bold)
+                    style = TextStyle(
+                        color = Color.White,
+                        fontWeight = FontWeight.Bold,
+                        fontFamily = customFont,
+                    )
                 )
                 Spacer(modifier = Modifier.padding(top = 5.dp))
                 OutlinedTextField(
@@ -102,7 +107,7 @@ class SignupActivity : BaseActivity() {
                             shape = RoundedCornerShape(20.dp)
                         )
                         .fillMaxSize(),
-                    textStyle = TextStyle(color = Color.White),
+                    textStyle = TextStyle(color = Color.White, fontFamily = customFont),
                     shape = RoundedCornerShape(20.dp)
 
                 )
@@ -110,7 +115,11 @@ class SignupActivity : BaseActivity() {
 
                 Text(
                     text = "Email Address:",
-                    style = TextStyle(color = Color.White, fontWeight = FontWeight.Bold)
+                    style = TextStyle(
+                        color = Color.White,
+                        fontWeight = FontWeight.Bold,
+                        fontFamily = customFont
+                    )
                 )
                 Spacer(modifier = Modifier.padding(top = 5.dp))
                 OutlinedTextField(
@@ -124,7 +133,7 @@ class SignupActivity : BaseActivity() {
                             shape = RoundedCornerShape(20.dp)
                         )
                         .fillMaxSize(),
-                    textStyle = TextStyle(color = Color.White),
+                    textStyle = TextStyle(color = Color.White, fontFamily = customFont),
                     shape = RoundedCornerShape(20.dp)
 
                 )
@@ -132,7 +141,11 @@ class SignupActivity : BaseActivity() {
 
                 Text(
                     text = "Password:",
-                    style = TextStyle(color = Color.White, fontWeight = FontWeight.Bold)
+                    style = TextStyle(
+                        color = Color.White,
+                        fontWeight = FontWeight.Bold,
+                        fontFamily = customFont
+                    )
                 )
                 Spacer(modifier = Modifier.padding(top = 5.dp))
                 OutlinedTextField(
@@ -170,7 +183,7 @@ class SignupActivity : BaseActivity() {
                             shape = RoundedCornerShape(20.dp)
                         )
                         .fillMaxSize(),
-                    textStyle = TextStyle(color = Color.White),
+                    textStyle = TextStyle(color = Color.White, fontFamily = customFont),
                     shape = RoundedCornerShape(20.dp)
 
                 )
@@ -207,7 +220,8 @@ class SignupActivity : BaseActivity() {
                             textAlign = TextAlign.Center,
                             style = TextStyle(
                                 fontWeight = FontWeight.Bold,
-                                fontSize = TextUnit(value = 18f, type = TextUnitType.Sp)
+                                fontSize = TextUnit(value = 18f, type = TextUnitType.Sp),
+                                fontFamily = customFont
                             )
                         )
                     }
@@ -235,6 +249,7 @@ class SignupActivity : BaseActivity() {
                             textAlign = TextAlign.Center,
                             style = TextStyle(
                                 fontWeight = FontWeight.Bold,
+                                fontFamily = customFont,
                                 fontSize = TextUnit(value = 18f, type = TextUnitType.Sp)
                             )
                         )

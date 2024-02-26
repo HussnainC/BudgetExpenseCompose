@@ -162,7 +162,7 @@ class MainActivity : BaseActivity() {
                                         color = Color.White, fontSize = TextUnit(
                                             16f,
                                             TextUnitType.Sp
-                                        ), fontWeight = FontWeight.Bold
+                                        ), fontWeight = FontWeight.Bold,fontFamily = customFont
                                     )
                                 )
                             }
@@ -176,7 +176,7 @@ class MainActivity : BaseActivity() {
                             fontSize = TextUnit(
                                 24f,
                                 TextUnitType.Sp
-                            ), fontWeight = FontWeight.Bold, color = Color.Black
+                            ), fontWeight = FontWeight.Bold, color = Color.Black,fontFamily = customFont
                         )
                     )
 
@@ -195,7 +195,7 @@ class MainActivity : BaseActivity() {
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
                     Text(
-                        text = "Hello ${userDataHolder.currentUser.name}, here is a brief\noverview on your finances",
+                        text = "Hello ${userDataHolder.currentUser.name}, here is a brief overview on your finances",
                         style = textStyle(textSize = 18f), textAlign = TextAlign.Center
                     )
 

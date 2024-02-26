@@ -1,33 +1,34 @@
 {
   "project_info": {
-    "project_number": "313545792730",
-    "project_id": "budgetexpense-4ca06",
-    "storage_bucket": "budgetexpense-4ca06.appspot.com"
+    "project_number": "356188275698",
+    "firebase_url": "https://carrental-e5de3-default-rtdb.firebaseio.com",
+    "project_id": "carrental-e5de3",
+    "storage_bucket": "carrental-e5de3.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:313545792730:android:19de3f5dc73329788399e3",
+        "mobilesdk_app_id": "1:356188275698:android:7ab7e7451e18804045e16b",
         "android_client_info": {
           "package_name": "com.codex.budgetexpense"
         }
       },
       "oauth_client": [
         {
-          "client_id": "313545792730-ati8ffalqvkpngg4d51c119r13rhi16u.apps.googleusercontent.com",
+          "client_id": "356188275698-b0helc5rei801sasjbm9h2gaf59ahgss.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBRa4wJ2rrhTCVCdEBcNKcJoGtYI6VNjVc"
+          "current_key": "AIzaSyDHSuQGOQGPZePT5pzljoMeKHMgnGv7BWc"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "313545792730-ati8ffalqvkpngg4d51c119r13rhi16u.apps.googleusercontent.com",
+              "client_id": "356188275698-b0helc5rei801sasjbm9h2gaf59ahgss.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

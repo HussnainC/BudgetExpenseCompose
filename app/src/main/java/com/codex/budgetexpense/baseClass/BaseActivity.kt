@@ -14,9 +14,12 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.*
 import androidx.compose.ui.window.DialogProperties
+import com.codex.budgetexpense.R
 import com.codex.budgetexpense.utils.DataHolderClass
 import com.codex.budgetexpense.utils.FireBaseRefrences
 
@@ -68,7 +71,7 @@ open class BaseActivity : ComponentActivity() {
                             color = Color.White, fontSize = TextUnit(
                                 18f,
                                 TextUnitType.Sp
-                            )
+                            ), fontFamily = customFont
                         ), modifier = Modifier.padding(start = 10.dp)
                     )
                 }
@@ -76,6 +79,19 @@ open class BaseActivity : ComponentActivity() {
             }
         }
     }
+
+
+    protected val customFont: FontFamily
+        get() {
+            return FontFamily(
+                listOf(
+                    Font(resId = R.font.raleway),
+                    Font(resId = R.font.raleway_medium),
+                    Font(resId = R.font.raleway_semibold),
+                    Font(resId = R.font.raleway_bold)
+                )
+            )
+        }
 
     @Composable
     fun textStyle(
@@ -87,7 +103,7 @@ open class BaseActivity : ComponentActivity() {
             fontSize = TextUnit(
                 textSize,
                 TextUnitType.Sp
-            ), fontWeight =bold, color = color
+            ), fontWeight = bold, color = color, fontFamily = customFont
         )
     }
 
